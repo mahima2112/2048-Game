@@ -274,10 +274,18 @@ public class Game2048 extends JPanel {
 			}
 		}
 	}
+	
+	
+	//The RenderingHints class defines and manages collections of keys and associated values which allow an application
+	//to provide input into the choice of algorithms used by other classes which perform rendering and image manipulation 
+	//services. The Graphics2D class, and classes that implement BufferedImageOp and RasterOp all provide methods to 
+	//get and possibly to set individual or groups of RenderingHints keys and their associated values
 
 	private void drawTile(Graphics g2, Tile tile, int x, int y) {
 		Graphics2D g = ((Graphics2D) g2);
-		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON); 
+		//The ANTIALIASING hint controls whether or not the geometry rendering
+		//methods of a Graphics2D object will attempt to reduce aliasing artifacts along the edges of shapes.
 		g.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_NORMALIZE);
 		int value = tile.value;
 		int xOffset = offsetCoors(x);
