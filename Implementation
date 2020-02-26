@@ -227,15 +227,15 @@ public class Game2048 extends JPanel {
 		for (int i = 0; i < 4 && !oldLine[i].isEmpty(); i++) {
 			int num = oldLine[i].value;
 			if (i < 3 && oldLine[i].value == oldLine[i + 1].value) {
-				num *= 2;
-				score += num;
+				num *= 2; // if 2 values are same and the cells can be merged
+				score += num; // update the score created
 				int target = 2048;
 				if (num == target) {
 					win = true;
 				}
 				i++;
 			}
-			list.add(new Tile(num));
+			list.add(new Tile(num)); // add that number in a new tile on board
 		}
 		if (list.size() == 0) {
 			return oldLine;
@@ -247,7 +247,7 @@ public class Game2048 extends JPanel {
 
 	private static void ensureSize(java.util.List<Tile> l, int s) {
 		while (l.size() != s) {
-			l.add(new Tile());
+			l.add(new Tile()); // you can add tiles upto 4*4 point
 		}
 	}
 
