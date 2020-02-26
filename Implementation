@@ -261,6 +261,10 @@ public class Game2048 extends JPanel {
 
 	private void setLine(int index, Tile[] re) {
 		System.arraycopy(re, 0, myTile, index * 4, 4);
+		
+		//public static void arraycopy(Object source_arr, int sourcePos,
+                            Object dest_arr, int destPos, int len)
+		// used to copy the array elements from a particular point to destination point
 	}
 
 	@Override
