@@ -80,7 +80,7 @@ public class Game2048 extends JPanel {
 			myTile[i] = new Tile();
 		}
 		addTile();
-		addTile();
+		addTile(); // we need 2 tiles to combine and begin the game
 
 	}
 
